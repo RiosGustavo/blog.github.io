@@ -80,24 +80,115 @@
   /*SPACING*/
   --section-padding: 70px;
 
-  /*transition*/
+  /*transicion transition*/
   --transition-1: 0.25s ease;
 --transition-2: 0.5s ease;
 --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
 --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 }
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+/*-----------#RESET------------------------*/
+  
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+li{ list-style: none;}
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+a,
+img,
+span,
+input,
+button,       /*esto significa que heredan esta propiedad de mostrarse como block*/
+ion-icon {display: block;}  
+
+a{
+  color: inherit; /* heredado  inherit*/
+  text-decoration: none;
+}
+
+img { height:auto}
+
+input,
+button{
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+input{
+  width: 100%;
+  outline:none;
+}
+
+button{cursor: pointer;}
+
+ion-icon{ pointer-events: none;}
+
+address{font-style: normal;}
+
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--bg-oxford-blue-2);
+  color: var(--text-shadow-blue);
+  font-family: var(--fontFamily-noto_sans);
+  font-size: 1.6rem;
+  line-height: var(--lineHeight-4);
+  overflow-y: overlay;
+  height: 300vh
+}
+
+::-webkit-scrollbar {width: 5px;}
+
+::-webkit-scrollbar-track {background-color: transparent;}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-carolina-blue);
+  border-radius: var(--radius-pill);
+}
+
+/*----------#REUSED STYLE-------------------------*/
+  
+
+.container { padding-inline: 16px;}
+
+.hover-1,
+.hover-2 { transition: var(--transition-1);}
+
+.hover-1:is(:hover, :focus-visible) {
+  color: var(--text-wild-blue-yonder);
+  transform: translateX(3px);
+}
+
+.hover-2:is(:hover, :focus-visible) {
+  color: var(--text-carolina-blue);
+}
+
+.profile-card{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-card .profile-baner {
+  border-radius: var(--radius-circle);
+}
+
+/*--------------#HEADER---------------------*/
+  
+.navbar,
+
+
+
 
 /*-----------------------------------*\
   #HERO
