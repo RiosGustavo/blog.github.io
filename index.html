@@ -20,7 +20,7 @@
     <!--estilos css-->
     <link rel="stylesheet" href="./style.css">
     <!--Imagen precargada-->
-    <link rel="preload" as="image" href="./imagenes/"> <!--FALTA AGREGAR IMAGEN-->
+    <link rel="preload" as="image" href="./imagenes/foto perfil.jpg"> <!--FALTA AGREGAR IMAGEN-->
     <link rel="preload" as="image" href="./imagenes/pattern-2.svg">
     <link rel="preload" as="image" href="./imagenes/pattern-3.svg">
 </head>
@@ -90,7 +90,7 @@
 
                         <li>
                             <a href="#" class="navbar-botton-link hover-1">Profile</a>
-                            
+
                         </li>
 
                         <li>
@@ -126,7 +126,7 @@
 
             </nav>
 
-            <a href="#" class="btn btn-primary">Subscribace</a>
+            <a href="#" class="btn btn-secondary">Subscribace</a>
 
             <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
                 <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -134,6 +134,54 @@
 
         </div>
     </header>
+
+    <main>
+        <article>
+
+            <!--
+                hero
+            -->
+
+            <section class="hero" id="home" aria-label="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="hero-subtitle">
+                            Hola A todos </p>
+                        <h1 class="headline headline-1 section-title">
+                            Yo soy <span class="span">Gustavo Superlango</span>
+                        </h1>
+
+                        <p class="hero-text">
+                            Estoy altamente familiarizado con HTML, CSS y JavaScript, las cuales son bases fundamentales
+                            en la creación de sitios web interactivos y atractivos. Además, he trabajado con frameworks
+                            como React También tengo experiencia en el manejo de JavaSpring y bases de datos, como MySQL
+                            , lo que me permite gestionar la persistencia de datos de manera efectiva. En resumen, mi
+                            experiencia abarca un amplio espectro de tecnologías web, lo que me permite adaptarme
+                            fácilmente a diferentes proyectos y requisitos.
+                        </p>
+                        <div class="input-wrapper">
+                            <input type="email" name="email_address" placeholder="Escriba su email" required
+                                class="input-field" autocomplete="off">
+                            <button class="btn btn-primary">
+                                <span class="span">Subscribete</span>
+                                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="hero-banner">
+                        <img src="./imagenes/hero-banner.jpg" width="327" height="490" alt="Superlango" class="w-100">
+                        <img src="./imagenes/pattern-2.svg" width="27" height="26" alt="shape" class="shepe shape-1">
+                        <img src="./imagenes/pattern-3.svg" width="27" height="26" alt="shape" class="shepe shape-2">
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+
+
 
 
     <!--link archivo app.js-->
