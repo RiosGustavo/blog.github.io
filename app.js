@@ -1,36 +1,44 @@
+"use strict";
+
 /**
- * agregar un event listener multiple elementos
+ * Add event listener on multiple elements
  */
 
 const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.lenght; i < len; i++) {
-    elements[i].addEventListener(event, callback);
+  for (let i = 0, len = elements.length; i < len; i++) {
+    elements[i].addEventListener(eventType, callback);
   }
 };
 
 /**
- * mobile navbar toggler
+ * MOBILE NAVBAR TOGGLER
  */
 
 const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[ data-nav-toggler]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 
-const toggleNav = () => navbar.classList.toggle("active");
+const toggleNav = () => {
+  navbar.classList.toggle("active");
+  document.body.classList.toggle("nav-active");
+};
 
 addEventOnElements(navTogglers, "click", toggleNav);
 
 /**
- * ANIMACIÓN DE CABECERA
- * Cuando se desplace hacia abajo a 100 px, el encabezado estará activo
+ * HEADER ANIMATION
+ * When scrolled donw to 100px header will be active
  */
 
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     header.classList.add("active");
+    backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
 });
 
@@ -40,44 +48,41 @@ window.addEventListener("scroll", () => {
 
 const slider = document.querySelector("[data-slider]");
 const sliderContainer = document.querySelector("[data-slider-container]");
-
-/** trae los elementos del archivo HTML */
 const sliderPrevBtn = document.querySelector("[data-slider-prev]");
 const sliderNextBtn = document.querySelector("[data-slider-next]");
 
-/** del archivo css se trae la viriable  "--slider-items" linea 534 */
 let totalSliderVisibleItems = Number(
   getComputedStyle(slider).getPropertyValue("--slider-items")
 );
-
 let totalSlidableItems =
   sliderContainer.childElementCount - totalSliderVisibleItems;
 
 let currentSlidePos = 0;
 
-const moveSliferItem = function () {
+const moveSliderItem = function () {
   sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
 };
 
 /**
- * next slide
+ * NEXT SLIDE
  */
 
 const slideNext = function () {
   const slideEnd = currentSlidePos >= totalSlidableItems;
+
   if (slideEnd) {
     currentSlidePos = 0;
   } else {
     currentSlidePos++;
   }
 
-  moveSliferItem();
+  moveSliderItem();
 };
 
 sliderNextBtn.addEventListener("click", slideNext);
 
 /**
- * prev slide
+ * PREVIOUS SLIDE
  */
 
 const slidePrev = function () {
@@ -87,18 +92,20 @@ const slidePrev = function () {
     currentSlidePos--;
   }
 
-  moveSliferItem();
+  moveSliderItem();
 };
 
 sliderPrevBtn.addEventListener("click", slidePrev);
 
 /**
- * Responsive
+ * RESPONSIVE
  */
-
-window.addEventListener("ressize", function () {
-  totalSliderVisibleItems = Number(getComputedStyle(slider).getPropertyValue("--slider-items"));
-  totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
+window.addEventListener("resize", function () {
+  totalSliderVisibleItems = Number(
+    getComputedStyle(slider).getPropertyValue("--slider-items")
+  );
+  totalSlidableItems =
+    sliderContainer.childElementCount - totalSliderVisibleItems;
 
   moveSliderItem();
 });
