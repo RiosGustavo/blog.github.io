@@ -25,7 +25,7 @@
     <link rel="preload" as="image" href="./imagenes/pattern-3.svg">
 </head>
 
-<body>
+<body id="top">
     <!--Header
          (Cabecera)-->
     <header class="header" data-header>
@@ -69,7 +69,7 @@
 
                 </ul>
 
-                <div class="navbar-botton">
+                <div class="navbar-bottom">
 
                     <div class="profile-card">
                         <img src="./imagenes/profile.JPG" width="48" height="48" alt="Gustavo" class="profile-banner">
@@ -90,28 +90,28 @@
                     <ul class="link-list">
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">Profile</a>
+                            <a href="#" class="navbar-bottom-link hover-1">Profile</a>
 
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">Articles Saved</a>
+                            <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">Add New Post</a>
+                            <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">My Likes</a>
+                            <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">Account Setting</a>
+                            <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
                         </li>
 
                         <li>
-                            <a href="#" class="navbar-botton-link hover-1">Sign Out</a>
+                            <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
                         </li>
 
 
@@ -1150,42 +1150,179 @@
             </section>
 
 
-            <!--
-                FOOTER
-            -->
-
-            <footer>
-
-                <div class="contanier">
-
-                    <div class="card footer">
-                        <div class="section footer-top">
-
-                           <div class="footer-brand">
-
-                            <a href="#" class="logo">
-
-                                <img src="./imagenes/logo1.png"  width="119" height="37"  
-                                loading="lazy" alt="gustavo logo">
-                            </a>
-
-
-                           </div>
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </footer>
-
-
 
         </article>
     </main>
 
+    <!--
+                FOOTER 
+            -->
 
+
+
+    <footer>
+
+        <div class="contanier">
+
+            <div class="card footer">
+                <div class="section footer-top">
+
+                    <div class="footer-brand">
+
+                        <a href="#" class="logo">
+
+                            <img src="./imagenes/logo1.png" width="119" height="37" loading="lazy" alt="gustavo logo">
+                        </a>
+
+                        <p class="footer-text">
+
+                            Este blog está dedicado a explorar el fascinante mundo del desarrollo web, brindando
+                            recursos, tutoriales y consejos prácticos para ayudarte a crear sitios web
+                            impactantes. Nuestro objetivo es inspirar y capacitar a los entusiastas del
+                            desarrollo web, desde principiantes hasta profesionales, a través de contenido
+                            actualizado y relevante.
+                        </p>
+
+                        <p class="footer-list-title">direccion</p>
+
+                        <address class="footer-text address">
+                            Carrera 20 # 71 -80 <br>
+                            Manizales - Colombia
+                        </address>
+
+
+
+                    </div>
+
+                    <div class="footer-list">
+
+                        <p class="footer-list-title">
+                            Categorias
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <a href="#" class="footer-link hover-2">Accion</a>
+
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-link hover-2">Negocios</a>
+
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-link hover-2">Aventura</a>
+
+                            </li>
+
+                            <li>
+                                <a href="#" class="footer-link hover-2">Tecnologia</a>
+
+                            </li>
+
+
+
+
+                        </ul>
+
+
+                    </div>
+
+                    <div class="footer-list">
+
+                        <p class="footer-list-title">
+
+                            Boletin Informativo
+
+                        </p>
+
+                        <p class="footer-text">
+                            Regístrese para ser el primero en recibir las últimas historias
+                        </p>
+
+                        <div class="input-wrapper">
+
+                            <input type="text" name="nombre" placeholder="Su nombre" required id="" class="input-field"
+                                autocomplete="off">
+
+                            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <input type="email" name="email" placeholder="direccion de email" required id=""
+                                class="input-field" autocomplete="off">
+
+                            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                        </div>
+
+
+                        <a href="#" class="btn btn-primary">
+
+                            <span class="span">Subcribete</span>
+
+                            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                        </a>
+
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+                    <ul class="social-list">
+
+                        <li>
+                            <a href="/www.linkedin.com/in/gustavo-superlango" target="_blank" class="social-link">
+
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                                <span class="span">LinkedIn</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.instagram.com/p/CtCpA_tgRSL/?utm_source=ig_web_button_share_sheet&igshid=MzRlODBiNWFlZA=="
+                                target="_blank" class="social-link">
+
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <span class="span">Instagram</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!--
+    BACK TO TOP VOLVER ARRIBA
+-->
+
+<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+</a>
 
 
     <!--link archivo app.js-->

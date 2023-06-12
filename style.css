@@ -1058,7 +1058,7 @@ body.nav-active {
 \*-----------------------------------*/
 
 /**
- * responsive for large than 575px screen
+ * responsive for large than 575px screen  para adaptarse al tamaño de varias pantallas
  */
 
 @media (min-width: 575px) {
